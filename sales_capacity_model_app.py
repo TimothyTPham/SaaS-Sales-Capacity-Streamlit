@@ -36,7 +36,7 @@ for i in range(months):
     total_reps.append(total)
 
     if i >= ramp_months:
-        ramped = sum(hires_by_month[i - ramp_months + 1 : i + 1])
+        ramped = sum(hires_by_month[:i - ramp_months + 1])
     else:
         ramped = 0
     fully_ramped_reps.append(ramped)
